@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Réaliser un portfolio en HTML5 et CSS3</title>
+  </head>
+  <body>
+
+    <div id="container" class="flex">
+      <!-- LEFT PART -->
+      <div id="left_part" class="padding_outer">
+        <!-- Profil -->
+        <div>
+          <div class="flex justify_center inner_padding">
+            <h3 class="color_white">Samih Habbani</h3>
+          </div>
+
+          <div class="flex justify_center inner_padding">
+            <img src="img/profile_picture_small.jpg" alt="" />
+          </div>
+
+          <div class="flex justify_center inner_padding">
+            <p class="color_white text_center">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+
+          <div class="flex justify_center inner_padding" id="social_network">
+            <i class="icon fb"></i>
+            <i class="icon insta"></i>
+            <i class="icon snap"></i>
+            <i class="icon twitter"></i>
+            <i class="icon linkedin"></i>
+          </div>
+          <script>
+          $('.icon').click(function() {
+          $(this).toggleClass('active');
+          });
+          </script>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <div id="navigation" class="flex justify_center padding_part">
+            <ul class="nav_bar">
+              <li class="flex align_center">
+                <i class="about"></i
+                ><a class="color_white" href="#">About me</a>
+              </li>
+              <li class="flex align_center">
+                <i class="portfolio"></i
+                ><a class="color_white" href="#">Portfolio</a>
+              </li>
+              <li class="flex align_center">
+                <i class="services"></i
+                ><a class="color_white" href="#">Services</a>
+              </li>
+              <li class="flex align_center">
+                <i class="resume"></i><a class="color_white" href="#">Resume</a>
+              </li>
+              <li class="flex align_center">
+                <i class="blog"></i><a class="color_white" href="#">Blog</a>
+              </li>
+              <li class="flex align_center">
+                <i class="contact"></i
+                ><a class="color_white" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex justify_center inner_padding">
+            <button id="buttonHireMe" class="flex align-center color_white">
+              <i class="send"></i>
+              Hire me
+            </button>
+          </div>
+        </div>
+
+        <!-- Dark Mode -->
+        <div class="flex align_center flex_column padding_part">
+          <p class="color_white">Dark Mode</p>
+          <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+        <!--JS pour activer Dark mode-->
+      <script>
+        const checkbox = document.querySelector("input[type='checkbox']");
+        const body = document.querySelector("body");
+        
+        checkbox.addEventListener("change", function() {
+          if (this.checked) {
+            body.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+          } else {
+            body.style.backgroundColor = "white";
+          }
+        });
+        const text = document.querySelector("p");
+
+    checkbox.addEventListener("change", function() {
+      if (this.checked) {
+    body.style.backgroundColor = "rgba(0, 0, 0, 0.3)";
+    text.style.color = "white";
+  } else {
+    body.style.backgroundColor = "white";
+    text.style.color = "black";
+  }
+});
+
+        </script>
+
+        <!--Fin Dark mode-->
+      <!-- RIGHT PART -->
+      <div id="right_part" class="padding_outer">
+        <!-- Presentation -->
+
+        <div class="flex">
+          <div class="half">
+            <div class="inner_padding">
+              <h1>Samih Habbani</h1>
+            </div>
+
+            <div class="inner_padding">
+              <h4>Full Stack Developer</h4>
+            </div>
+
+            <div class="inner_padding">
+              <p>
+                Lorem Ipsum is simply dummy <span>text</span> of the printing
+                and typesetting industry. Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
+                <span>printer</span> took a galley of type and scrambled it to
+                make a type specimen book.
+              </p>
+            </div>
+
+            <div class="flex inner_padding">
+              <button class="color_white flex align_center">
+                <i class="right-arrow"></i> View portfolio
+              </button>
+              <button class="color_white flex align_center">
+                <i class="sheet"></i> View resume
+              </button>
+            </div>
+          </div>
+
+          <div class="half flex justify_end">
+            <img src="img/profil_picture.jpg" alt="" />
+          </div>
+        </div>
+
+        <!-- What do I do -->
+        <div class="padding_part">
+          <div class="inner_padding">
+            <h3>What do I do?</h3>
+          </div>
+          <div>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has <span>been</span> the industry's
+              standard dummy text ever since the 1500s, when an unknown printer
+              <span>took</span> a galley of type and scrambled it to make a type
+              specimen book.
+            </p>
+          </div>
+        </div>
+
+        <!-- Experiences -->
+        <div id="experiences" class="padding_part">
+          <ul class="flex flex_wrap">
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <!--  -->
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <!--  -->
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <!--  -->
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <!--  -->
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <!--  -->
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <!--  -->
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <!--  -->
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <!--  -->
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+
+            <!--  -->
+
+            <li>
+              <i></i>
+              <h5>Vanilla Javascript</h5>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
